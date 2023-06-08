@@ -5,13 +5,13 @@
 class V8s < Formula
   desc "kubernetes controller for vince- The Cloud Native Web Analytics Platform"
   homepage "httpd://vinceanalytics.github.io"
-  version "0.0.7"
+  version "0.0.9"
   license "AGPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.7/v8s_darwin_x86_64.tar.gz"
-      sha256 "44a3ab102be7e219e3a2b3fdea0ed039d2e33738f25f56c80e8a575c00b13656"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.9/v8s_darwin_x86_64.tar.gz"
+      sha256 "272e7bbe2423216d5f2456c235713c3aadbf715ae83c041b209aa012ecd51087"
 
       def install
         bin.install "v8s"
@@ -22,8 +22,8 @@ class V8s < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.7/v8s_darwin_arm64.tar.gz"
-      sha256 "4282c9514f17621ad21e5fc9a11971d192d72622c76657f8648407e26af2a147"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.9/v8s_darwin_arm64.tar.gz"
+      sha256 "63a3e1d2c0e38c52535fd139756e7c55872ba5a9c19268769d8722d3959680c3"
 
       def install
         bin.install "v8s"
@@ -36,9 +36,9 @@ class V8s < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.7/v8s_linux_x86_64.tar.gz"
-      sha256 "e5cc7d0b727e324c2aff46b1175b0b31e2504898d24864a5ec1a05c128d2520f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.9/v8s_linux_arm64.tar.gz"
+      sha256 "0994d0df98bd8c769160523a3e3fa9ae0091f32e638830eecb6a8c8eefdf3e25"
 
       def install
         bin.install "v8s"
@@ -48,9 +48,9 @@ class V8s < Formula
         man1.install "man/v8s.1"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.7/v8s_linux_arm64.tar.gz"
-      sha256 "0221cf820914f79583ece27644c9e0cc1167cb26ea693e17a16d805e9c1850d8"
+    if Hardware::CPU.intel?
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.9/v8s_linux_x86_64.tar.gz"
+      sha256 "ff21f9612d15851024fb146af02953fadfb068e87f431732b223662a8db7c2a8"
 
       def install
         bin.install "v8s"
