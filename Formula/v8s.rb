@@ -5,13 +5,13 @@
 class V8s < Formula
   desc "kubernetes controller for vince- The Cloud Native Web Analytics Platform"
   homepage "httpd://vinceanalytics.github.io"
-  version "0.0.9"
+  version "0.0.10"
   license "AGPL-3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.9/v8s_darwin_x86_64.tar.gz"
-      sha256 "272e7bbe2423216d5f2456c235713c3aadbf715ae83c041b209aa012ecd51087"
+    if Hardware::CPU.arm?
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.10/v8s_darwin_arm64.tar.gz"
+      sha256 "110283fe3336cd151dbbce8d5c5fd3dc0b2da4661be251b6429637e45f5042aa"
 
       def install
         bin.install "v8s"
@@ -21,9 +21,9 @@ class V8s < Formula
         man1.install "man/v8s.1"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.9/v8s_darwin_arm64.tar.gz"
-      sha256 "63a3e1d2c0e38c52535fd139756e7c55872ba5a9c19268769d8722d3959680c3"
+    if Hardware::CPU.intel?
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.10/v8s_darwin_x86_64.tar.gz"
+      sha256 "b527916c5108ab815404542c776829c7535f28c6fd8dc84007f427dcad75a964"
 
       def install
         bin.install "v8s"
@@ -37,8 +37,8 @@ class V8s < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.9/v8s_linux_arm64.tar.gz"
-      sha256 "0994d0df98bd8c769160523a3e3fa9ae0091f32e638830eecb6a8c8eefdf3e25"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.10/v8s_linux_arm64.tar.gz"
+      sha256 "fd5218687ad2d6a6c7ff7ebf6d0d547df4777791871eae08fc1d4b38da5a1225"
 
       def install
         bin.install "v8s"
@@ -49,8 +49,8 @@ class V8s < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.9/v8s_linux_x86_64.tar.gz"
-      sha256 "ff21f9612d15851024fb146af02953fadfb068e87f431732b223662a8db7c2a8"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.10/v8s_linux_x86_64.tar.gz"
+      sha256 "8eb83cc0d6b60e0f8cded8466982381e6d38fdfb5906c03fbf4d05155e51843f"
 
       def install
         bin.install "v8s"
