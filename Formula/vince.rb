@@ -5,13 +5,13 @@
 class Vince < Formula
   desc "The Cloud Native Web Analytics Platform"
   homepage "httpd://vinceanalytics.github.io"
-  version "0.0.14"
+  version "0.0.15"
   license "AGPL-3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.14/vince_darwin_arm64.tar.gz"
-      sha256 "d658810fa2a6fa4f2a6a61c2c19e324ec07d181630bf872c9412303f68d2a02c"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.15/vince_darwin_arm64.tar.gz"
+      sha256 "21633341423db2bcaf6fed265593533e8893eb22b96cb9aecdf1ea797708f32a"
 
       def install
         bin.install "vince"
@@ -22,8 +22,8 @@ class Vince < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.14/vince_darwin_x86_64.tar.gz"
-      sha256 "e74b47f7e2cdd1f7188c4a67568ac0793e02fa9550bd9e7b1264469b327891e9"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.15/vince_darwin_x86_64.tar.gz"
+      sha256 "bed8dc6af9df2c28656f299582a20d581e70f82b7b19bb2d1348267bf828c6a1"
 
       def install
         bin.install "vince"
@@ -37,8 +37,8 @@ class Vince < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.14/vince_linux_arm64.tar.gz"
-      sha256 "054c28223178ef7ff2d1a960c037b838fdd83e754f3c312d125bc0482bcb9a0f"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.15/vince_linux_arm64.tar.gz"
+      sha256 "e2e5f95369b9d6cde4e8d14bae3d95fd70e78bbc4a6d93f7d444125e9c6bf73d"
 
       def install
         bin.install "vince"
@@ -49,8 +49,8 @@ class Vince < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.14/vince_linux_x86_64.tar.gz"
-      sha256 "cd348cd52c151622d87e87dce3026aaad0e6b1bdf74288d1f02a4b7630b3e97d"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.15/vince_linux_x86_64.tar.gz"
+      sha256 "5d8906a57de3a32b678210124af56ba5feee5cbb514daf7460bd56a0d19ece68"
 
       def install
         bin.install "vince"
