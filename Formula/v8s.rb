@@ -5,13 +5,13 @@
 class V8s < Formula
   desc "kubernetes controller for vince- The Cloud Native Web Analytics Platform"
   homepage "httpd://vinceanalytics.github.io"
-  version "0.0.17"
+  version "0.0.18"
   license "AGPL-3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.17/v8s_darwin_arm64.tar.gz"
-      sha256 "1d8d1da4e07a149cbab1814e2a87ff45bbddd86e997651856969a77ab179cd38"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.18/v8s_darwin_arm64.tar.gz"
+      sha256 "8b792fc4498edd5f7eecec17194d5c5702bf8dc9d8de205e5b5d15f73e2db9d8"
 
       def install
         bin.install "v8s"
@@ -22,8 +22,8 @@ class V8s < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.17/v8s_darwin_x86_64.tar.gz"
-      sha256 "6e1f7dc59702015bd5deaf27e70adbc1af6de02adf7b37d3299f51c33ef9843f"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.18/v8s_darwin_x86_64.tar.gz"
+      sha256 "af7fb0e4b957bb4513f2f186f06daca67cb22ad16f52587786875b52202e686f"
 
       def install
         bin.install "v8s"
@@ -37,8 +37,8 @@ class V8s < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.17/v8s_linux_arm64.tar.gz"
-      sha256 "b1637aa8fd10dc1a2291c8222b2101035e39755fae37baa1d81a9aeb224f264b"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.18/v8s_linux_arm64.tar.gz"
+      sha256 "e3569d566412cadf2c7eae561662dfbf669c7b62ee94e55cfa08518f5898ad86"
 
       def install
         bin.install "v8s"
@@ -49,8 +49,8 @@ class V8s < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.17/v8s_linux_x86_64.tar.gz"
-      sha256 "0c2762f92723f613cddd19d28449bdff516c397f868b6652327cd9c74429709b"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.18/v8s_linux_x86_64.tar.gz"
+      sha256 "92696476b5cd1db40b444dc2bc629ca3a0a6e873a11fa9dbd5566611dc8ab249"
 
       def install
         bin.install "v8s"
