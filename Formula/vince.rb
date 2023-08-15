@@ -5,13 +5,13 @@
 class Vince < Formula
   desc "The Cloud Native Web Analytics Platform"
   homepage "https://vinceanalytics.github.io"
-  version "0.0.20"
+  version "0.0.21"
   license "AGPL-3.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.20/vince_darwin_arm64.tar.gz"
-      sha256 "c4c2b3b1264766ffd963c3517c22c1fb2e16c45fcd23adb3cc9d8a1a586af4b7"
+    if Hardware::CPU.intel?
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.21/vince_darwin_x86_64.tar.gz"
+      sha256 "7cb18688eba88f9fd25aa83b82637a8b524bb780e27bce5fb5bdb20980a2ccc7"
 
       def install
         bin.install "vince"
@@ -21,9 +21,9 @@ class Vince < Formula
         man1.install "man/vince.1"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.20/vince_darwin_x86_64.tar.gz"
-      sha256 "785fb6c6e33d6bfaa0e9981f3b0aecec382e53f98faaefef4a73a55683462b04"
+    if Hardware::CPU.arm?
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.21/vince_darwin_arm64.tar.gz"
+      sha256 "669edfbacb1428f759f8747ac679a738e4a21edd26dc2f553a07b2c20c215f98"
 
       def install
         bin.install "vince"
@@ -37,8 +37,8 @@ class Vince < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.20/vince_linux_arm64.tar.gz"
-      sha256 "ccee98e6697f00030a5f6cf0cc77925d44e08cb865719aa7f6f12d1728acb2d9"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.21/vince_linux_arm64.tar.gz"
+      sha256 "4cf1912d2329b6e616f64b97c4ce41c28899c49e83c0b601a67c413ea8fcdbba"
 
       def install
         bin.install "vince"
@@ -49,8 +49,8 @@ class Vince < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.20/vince_linux_x86_64.tar.gz"
-      sha256 "d957cc054775f20f2c2e797b8dffbefa76197b257b0f9fad3f90b26d2bd84938"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.21/vince_linux_x86_64.tar.gz"
+      sha256 "51e4297436fc047c3771743708cdabbfe3ce53e3efd4a6269475295505727833"
 
       def install
         bin.install "vince"
