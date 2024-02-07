@@ -5,21 +5,21 @@
 class Vince < Formula
   desc "API first Cloud Native Web Analytics For Startups"
   homepage "https://vinceanalytics.com"
-  version "0.0.52"
+  version "0.0.53"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.52/vince_darwin_arm64.tar.gz"
-      sha256 "619ccc43db25d7ae9b5d81eac214172db16e41e24fea6f5137654f6fc97d8859"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.53/vince_darwin_arm64.tar.gz"
+      sha256 "95073f319961942e1c545deddd224598ccf5d6cb1e5a5f17f11c20dafc90205a"
 
       def install
         bin.install "vince"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.52/vince_darwin_x86_64.tar.gz"
-      sha256 "772601b9171cbec044379c0b533afd472952c6af93c9abe89e84f810178d76d1"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.53/vince_darwin_x86_64.tar.gz"
+      sha256 "72b456afd8a08220e6e77d6dbbf6c721614d4d3f0c256c737ef8b5fbe4d28d6d"
 
       def install
         bin.install "vince"
@@ -29,16 +29,16 @@ class Vince < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.52/vince_linux_arm64.tar.gz"
-      sha256 "5fd374118bce803d82ca1432669fc71e74d133b9f3b7d8de391ef5264c51ce6b"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.53/vince_linux_arm64.tar.gz"
+      sha256 "7e3d16c89e645436b16c5d296201811abf75c9494e0917538f34ffabea7fe682"
 
       def install
         bin.install "vince"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.52/vince_linux_x86_64.tar.gz"
-      sha256 "c6740de9cc9beb85867b14b9347dceda7210b0999cf2a0b2cdb20fceefc20b48"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.53/vince_linux_x86_64.tar.gz"
+      sha256 "fc23a0568a80f8686c9b09253498117845bc4b667d71a1862c182ae481643768"
 
       def install
         bin.install "vince"
