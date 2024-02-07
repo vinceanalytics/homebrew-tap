@@ -5,21 +5,21 @@
 class Vince < Formula
   desc "API first Cloud Native Web Analytics For Startups"
   homepage "https://vinceanalytics.com"
-  version "0.0.50"
-  license "AGPL-3.0"
+  version "0.0.51"
+  license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.50/vince_darwin_arm64.tar.gz"
-      sha256 "439a84ab53fe1511f05eebf34a5b023e4b97ac1ecd81b7b8f544b54d2f8e5609"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.51/vince_darwin_arm64.tar.gz"
+      sha256 "735471584748eb1d8a825cc8f0a0b39c346282571b00440603562480fd58fdd2"
 
       def install
         bin.install "vince"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.50/vince_darwin_x86_64.tar.gz"
-      sha256 "c9fe0db805175aba40602120774a78d6941587c96d1d612099e598ee6e9cfdf0"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.51/vince_darwin_x86_64.tar.gz"
+      sha256 "a1fb7f4c71477e68679e5389bfa490da9bf4f5c6765fa1a8164834a9dc85c99e"
 
       def install
         bin.install "vince"
@@ -29,16 +29,16 @@ class Vince < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.50/vince_linux_arm64.tar.gz"
-      sha256 "285da8c5e52eb3d2399fdce067d89912ea621de75c82d68cd24de14338ebaab1"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.51/vince_linux_arm64.tar.gz"
+      sha256 "41b2c27accc72fcdac2dfc1fadd30f0d94e7192a6f5e1750aeca546c02fc786c"
 
       def install
         bin.install "vince"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.50/vince_linux_x86_64.tar.gz"
-      sha256 "285a4034d82b9fcf5353cd3bb2efeb4994cd5761fe06ccdaac7ab2b35b8e2884"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.51/vince_linux_x86_64.tar.gz"
+      sha256 "ee6384181438f429fe753cac7b621ec1bfcb99894c4518fa0cfbfb55b29f9b62"
 
       def install
         bin.install "vince"
