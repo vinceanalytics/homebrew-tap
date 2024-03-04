@@ -5,21 +5,21 @@
 class Vince < Formula
   desc "API first high performance self hosted and cost effective privacy friendly web analytics  server for organizations of any size"
   homepage "https://vinceanalytics.com"
-  version "0.0.64"
+  version "0.0.65"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.64/vince_darwin_arm64.tar.gz"
-      sha256 "5a60245b36f953e5d0ceb66b4565c6fc2957eedb7ab77e9fdf7ccd010ac89509"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.65/vince_darwin_arm64.tar.gz"
+      sha256 "4f4181c5ca7982f9bd791f9dde98631dccfa6f2ac8375dced22924a003ec33b7"
 
       def install
         bin.install "vince"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.64/vince_darwin_x86_64.tar.gz"
-      sha256 "da2ba1fb2bcba40e07a792c9c2acb49849294227c54bfe000be227f25e3e33b2"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.65/vince_darwin_x86_64.tar.gz"
+      sha256 "28977d4e84d9139fdfd44339b7f5273d7288d6c9a2c26465844b9879e5dba28f"
 
       def install
         bin.install "vince"
@@ -29,16 +29,16 @@ class Vince < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.64/vince_linux_arm64.tar.gz"
-      sha256 "d716fb56dad7fd110e5654776eca9ae8840e47da94afa8e3cb50c0a3692cad4a"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.65/vince_linux_arm64.tar.gz"
+      sha256 "0d03b9a6fcb193e67b84d96effb8ecc3ea8e05723ed3e254158c71db1c5e320b"
 
       def install
         bin.install "vince"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.64/vince_linux_x86_64.tar.gz"
-      sha256 "e1d47ef6350b120813acb61ecc723762ae3fed6de86ab6afca0b3d06a0947d53"
+      url "https://github.com/vinceanalytics/vince/releases/download/v0.0.65/vince_linux_x86_64.tar.gz"
+      sha256 "4adec6e8b3613e0119b7706e801209a467a992fe3e6616a3ff3a5e097948be4b"
 
       def install
         bin.install "vince"
